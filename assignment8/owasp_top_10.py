@@ -15,6 +15,17 @@ risks = driver.find_elements(
     By.XPATH, '//h3[@id="top-102025-list"]/following-sibling::ol[1]/li/a'
 )
 
-print("Number of risks found:", len(risks))
+# Store the vulnerability titles and links
+results = []
+
+for risk in risks:
+    results.append({
+        "Title": risk.text,
+        "Link": risk.get_attribute("href")
+    })
+
+# Print the results
+for result in results:
+    print(result)
 
 driver.quit()
