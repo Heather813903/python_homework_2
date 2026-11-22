@@ -29,3 +29,11 @@ for result in results:
     print(result)
 
 driver.quit()
+
+# Task 6: Save the OWASP Top 10 results to a CSV file
+with open("assignment8/owasp_top_10.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.DictWriter(file, fieldnames=["Title", "Link"])
+    writer.writeheader()
+    writer.writerows(results)
+
+print("CSV file saved successfully!")
