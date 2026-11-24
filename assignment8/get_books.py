@@ -45,3 +45,12 @@ driver.quit()
 # Create and print the DataFrame
 df = pd.DataFrame(results)
 print(df)
+
+# Task 4 - Write out the data
+
+# Save the DataFrame to a CSV file
+df.to_csv("get_books.csv", index=False)
+
+# Save the results list to a JSON file
+with open("get_books.json", "w", encoding="utf-8") as file:
+    json.dump(results, file, indent=4, ensure_ascii=False)
