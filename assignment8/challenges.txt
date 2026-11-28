@@ -1,0 +1,3 @@
+Task 6: Challenges
+
+I had trouble finding the OWASP Top 10 list at first. I used Chrome Developer Tools to locate it and Selenium with XPath to collect the titles and links. I then checked the results and saved them to a CSV file.
